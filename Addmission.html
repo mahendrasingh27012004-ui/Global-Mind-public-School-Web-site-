@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>School Admission Form</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#1e2a44;
+    padding:20px;
+}
+
+.form-container{
+    max-width:650px;
+    margin:auto;
+    background:#ffffff;
+    padding:25px;
+    border-radius:10px;
+}
+
+h1{
+    text-align:center;
+    color:#1e2a44;
+    margin-bottom:20px;
+}
+
+h2{
+    margin:20px 0 10px;
+    color:#0f1a33;
+    border-bottom:2px solid #ffd700;
+    padding-bottom:5px;
+}
+
+label{
+    display:block;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:15px;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    background:#1e2a44;
+    color:white;
+    font-size:18px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0f1a33;
+}
+
+.note{
+    margin-top:15px;
+    font-size:14px;
+    color:#555;
+}
+
+/* Mobile Responsive */
+@media(max-width:600px){
+    .form-container{
+        padding:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="form-container">
+    <h1>School Admission Form</h1>
+
+    <form>
+
+        <h2>Student Details</h2>
+
+        <label>Student Name</label>
+        <input type="text" placeholder="Enter Student Name" required>
+
+        <label>Father's Name</label>
+        <input type="text" placeholder="Enter Father's Name" required>
+
+        <label>Mother's Name</label>
+        <input type="text" placeholder="Enter Mother's Name">
+
+        <label>Date of Birth</label>
+        <input type="date" required>
+
+        <label>Class Applying For</label>
+        <select required>
+            <option value="">Select Class</option>
+            <option>Nursery</option>
+            <option>LKG</option>
+            <option>UKG</option>
+            <option>Class 1</option>
+            <option>Class 2</option>
+            <option>Class 3</option>
+            <option>Class 4</option>
+            <option>Class 5</option>
+            <option>Class 6</option>
+            <option>Class 7</option>
+            <option>Class 8</option>
+        </select>
+
+        <h2>Identification Details</h2>
+
+        <label>Aadhaar Card Number</label>
+        <input type="text" placeholder="Enter 12 Digit Aadhaar Number" maxlength="12" required>
+
+        <label>SSSM ID</label>
+        <input type="text" placeholder="Enter SSSM ID" required>
+
+        <label>OTR Number</label>
+        <input type="text" placeholder="Enter OTR Number">
+
+        <label>U-DISE / Upper ID Number</label>
+        <input type="text" placeholder="Enter Upper ID Number">
+
+        <h2>Contact Details</h2>
+
+        <label>Mobile Number</label>
+        <input type="tel" placeholder="Enter Mobile Number" required>
+
+        <label>Address</label>
+        <textarea rows="3" placeholder="Enter Full Address"></textarea>
+
+        <button type="submit">Submit Admission Form</button>
+
+        <div class="note">
+            Note: Please bring original documents at the time of admission.
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
