@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>School Login</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== MOVING TOP BAR ===== */
+.top-bar{
+    width:100%;
+    background:#ffd700;
+    color:#1e2a44;
+    overflow:hidden;
+    white-space:nowrap;
+    padding:10px 0;
+    position:fixed;
+    top:0;
+    left:0;
+}
+
+.top-text{
+    display:inline-block;
+    font-size:22px;
+    font-weight:bold;
+    padding-left:100%;
+    animation: moveText 12s linear infinite;
+}
+
+@keyframes moveText{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+
+body{
+    background:#1e2a44;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding-top:60px; /* top bar space */
+}
+
+/* ===== LOGIN BOX ===== */
+.login-box{
+    background:#ffffff;
+    padding:30px;
+    width:350px;
+    border-radius:10px;
+}
+
+.login-box h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#1e2a44;
+}
+
+label{
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:8px 0 15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#1e2a44;
+    color:white;
+    border:none;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0f1a33;
+}
+
+.message{
+    text-align:center;
+    margin-top:10px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MOVING SCHOOL NAME -->
+<div class="top-bar">
+    <div class="top-text">
+        🌟 Global Mind Public School – Login Panel 🌟
+    </div>
+</div>
+
+<div class="login-box">
+    <h1>Login</h1>
+
+    <form onsubmit="return loginCheck()">
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Enter Username" required>
+
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter Password" required>
+
+        <button type="submit">Login</button>
+
+        <div class="message" id="msg"></div>
+    </form>
+</div>
+
+<script>
+function loginCheck(){
+    var user = document.getElementById("username").value;
+    var pass = document.getElementById("password").value;
+
+    if(user === "admin" && pass === "12345"){
+        document.getElementById("msg").style.color = "green";
+        document.getElementById("msg").innerHTML = "Login Successful ✅";
+    }else{
+        document.getElementById("msg").style.color = "red";
+        document.getElementById("msg").innerHTML = "Invalid Username or Password ❌";
+    }
+    return false;
+}
+</script>
+
+</body>
+</html>
