@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>School Admission</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html, body{
+    width:100%;
+    height:100%;
+    font-family: Arial, sans-serif;
+}
+
+.poster{
+    width:100vw;
+    min-height:100vh;
+    background:#1e2a44;
+    color:white;
+}
+
+/* ===== TOP MOVING LINE ===== */
+.top-bar{
+    width:100%;
+    background:#ffd700;
+    color:#1e2a44;
+    overflow:hidden;
+    white-space:nowrap;
+    padding:10px 0;
+}
+
+.top-text{
+    display:inline-block;
+    font-size:26px;
+    font-weight:bold;
+    padding-left:100%;
+    animation: moveText 12s linear infinite;
+}
+
+@keyframes moveText{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+
+/* CONTENT */
+.content{
+    padding:30px;
+    text-align:center;
+}
+
+h1{
+    color:#ffd700;
+    font-size:42px;
+}
+
+.tagline{
+    color:#7fffd4;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.address{
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.admission{
+    font-size:40px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.admission span{
+    color:#ffd700;
+}
+
+.class{
+    font-size:26px;
+    color:orange;
+    margin-bottom:20px;
+}
+
+.facilities{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:10px;
+    text-align:left;
+    max-width:700px;
+    margin:0 auto;
+}
+
+.facilities div{
+    font-size:18px;
+}
+
+/* CONTACT */
+.contact{
+    background:#ffd700;
+    color:black;
+    font-size:28px;
+    padding:15px;
+    margin-top:25px;
+    font-weight:bold;
+}
+
+/* FORM DESIGN */
+.form-box{
+    max-width:500px;
+    margin:30px auto;
+    background:white;
+    color:black;
+    padding:25px;
+    border-radius:10px;
+}
+
+.form-box h2{
+    margin-bottom:20px;
+    color:#1e2a44;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+    font-size:16px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.form-box button{
+    width:100%;
+    padding:12px;
+    font-size:18px;
+    background:#1e2a44;
+    color:white;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.form-box button:hover{
+    background:#0f1a33;
+}
+</style>
+</head>
+
+<body>
+
+<div class="poster">
+
+    <!-- MOVING TOP LINE -->
+    <div class="top-bar">
+        <div class="top-text">
+            🌟 Global Mind Public School – Admission Open Nursery to Class 8th 🌟
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Global Mind Public School</h1>
+        <div class="tagline">Learning Today For A Better Tomorrow</div>
+
+        <div class="address">
+            Bagdona Main Road Near HP Petrol Pump  
+            Salaiya in Global ITI Campus
+        </div>
+
+        <div class="admission">
+            Admission <span>Open</span>
+        </div>
+
+        <div class="class">
+            Nursery to Class 8th
+        </div>
+
+        <h2><u>Our Facilities</u></h2>
+      <br>
+
+        <div class="facilities">
+            <div>✔ Modern Infrastructure</div>
+            <div>✔ Excellent Teachers</div>
+            <div>✔ Art & Craft Activities</div>
+            <div>✔ Well Equipped Labs & Library</div>
+            <div>✔ Yoga & Activity</div>
+            <div>✔ Bus Facility Available</div>
+        </div>
+
+        <!-- ADMISSION FORM -->
+        <div class="form-box">
+            <h2>Admission Enquiry Form</h2>
+            <form>
+                <input type="text" placeholder="Student Name" required>
+                <input type="text" placeholder="Father's Name" required>
+
+                <select required>
+                    <option value="">Select Class</option>
+                    <option>Nursery</option>
+                    <option>LKG</option>
+                    <option>UKG</option>
+                    <option>Class 1</option>
+                    <option>Class 2</option>
+                    <option>Class 3</option>
+                    <option>Class 4</option>
+                    <option>Class 5</option>
+                    <option>Class 6</option>
+                    <option>Class 7</option>
+                    <option>Class 8</option>
+                </select>
+
+                <input type="tel" placeholder="Mobile Number" required>
+                <textarea rows="3" placeholder="Address"></textarea>
+
+                <button type="submit">Submit Admission Form</button>
+            </form>
+        </div>
+
+        <div class="contact">
+            📞 mobile-9977774542 , 7771019819 Gmail :-globalmind24@gmail.com
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
